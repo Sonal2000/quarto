@@ -22,13 +22,12 @@
           position: relative;
           height: 100vh;
           width: 100%;
-          background:linear-gradient(180deg,rgb(0, 0, 0),#ffffff),url(1.png);
+          background:linear-gradient(180deg,rgba(238, 255, 7,0.2),#ffffff),url(1.png);
           background-repeat: no-repeat;
           background-size: cover;
           background-blend-mode: screen;
 		  background-attachment: fixed;
           overflow-x: hidden;
-          
         }
         .wave{
             position: absolute;
@@ -66,7 +65,7 @@
 	align-items: center;
 	justify-content: center;
 	border-radius: 50%;
-    background: rgb(46, 46, 46);
+    background: rgb(255, 255, 255);
     box-shadow: 1px 5px 10px rgb(0, 0, 0);
     border: 1px solid black;
 }
@@ -76,7 +75,7 @@
 	width: 60%;
 	height: 3px;
 	border-radius: 1.5px;
-	background-color: rgb(179, 255, 0);
+	background-color: rgb(0, 0, 0);
 	transition: .4s;
 }
 
@@ -86,7 +85,7 @@
 	width: 100%;
 	height: 3px;
 	border-radius: 1.5px;
-	background-color: rgb(179, 255, 0);
+	background-color: rgb(0, 0, 0);
 	top: -10px;
 	left: 0;
 	transition: .4s;
@@ -98,7 +97,7 @@
 	width: 100%;
 	height: 3px;
 	border-radius: 1.5px;
-	background-color:rgb(179, 255, 0);
+	background-color:rgb(0, 0, 0);
 	top: 10px;
 	left: 0;
 	transition: .4s;
@@ -137,7 +136,7 @@
     width: 1600px;
     height: 1600px;
     border-radius: 80%;
-    border: 5px solid rgb(179, 255, 0);
+    border: 5px solid rgb(63, 63, 63);
     background-color: rgba(0, 0, 0, 0.9);
     display: flex;
     justify-content: center;
@@ -178,7 +177,7 @@
 }
 
 .menu > div > div > ul > li > a:hover{
-    color: rgb(179, 255, 0);
+    color: crimson;
 
 }
 
@@ -240,8 +239,8 @@
     pointer-events: none;
   }
 .logo{
-    position:fixed;
-    right:0;
+    position: relative;;
+    float:right;
     color: #000000;
     -webkit-text-stroke: 3px rgb(255, 255, 255);
     padding: 1%;
@@ -264,6 +263,99 @@
  
     font-size: 1.3em;
     color: rgb(0, 0, 0);
+}
+.box[class="caption"]
+{
+    font-size: 1.3em;
+    color: rgb(0, 0, 0);
+    
+}
+.sec{
+
+display:flex;
+justify-content: space-evenly;
+display: grid;
+grid-template-columns: 1fr 1fr 1fr;
+padding: 10px;
+
+
+}
+.cards{
+    
+width: 350px;
+height: 300px;
+background-color: #ffffff;  
+margin: 10px;
+border-radius: 10px;
+box-shadow: -15px -15px 15px rgba(255, 255, 255,0.5),
+15px 15px 15px rgba(0, 0, 0, 0),
+0px 5px 20px rgb(0, 0, 0),
+inset 4px 4px 5px rgba(0, 0, 0, 0.2),
+inset -4px -4px 5px rgba(0,0,0,0.3);
+}
+.im{
+ height: 40%;
+}
+.text{
+    text-align: center;
+    height: 60%;
+    color: rgb(175, 174, 174);
+}
+.btnn{
+    position: relative;
+    background-color: rgb(44, 44, 44);
+    float: right;
+    color: rgb(255, 255, 255);
+    padding: 10px;
+    border-radius: 5px;
+    margin-right: 10px;
+    margin-bottom: 5px;
+    box-shadow: 2px 2px grey,
+    -2px -2px grey;
+    
+
+}
+
+
+
+@media(max-width:1092px)
+{
+
+    .sec{
+
+display:flex;
+justify-content: space-evenly;
+display: grid;
+grid-template-columns: 1fr 1fr;
+}
+
+.cards{
+    
+    width: 300px;
+    height: 300px;
+}
+}
+
+
+@media(max-width:768px)
+{
+
+    .sec{
+align-items: center;
+display:flex;
+justify-content: space-evenly;
+display: grid;
+grid-template-columns: 1fr;
+padding: 10px;
+
+
+}
+
+.cards{
+    
+    width: 300px;
+    height: 300px;
+}
 }
 
 </style>
@@ -295,8 +387,7 @@
             <h1 class="logo">QUARTO</h1>
             <div class="box">
         <h3 class="caption">GET INSTANT NOTES.
-            <br>
-            LET us help you in passing the huddles along.
+           
         </h3>
         </div>
         
@@ -305,21 +396,95 @@
           </svg>
     </section>
     
+    <div class="sec">
     
+<div class="cards">
+<div class="im"></div>
+<div class="text">
+    <h2>ENGLISH</h2>
+</div>
+</div>
+<div class="cards">
+    <div class="im"></div>
+    <div class="text">
+        <h2>MATHEMATICS</h2>
+    </div>
+    </div>
+    <div class="cards">
+        <div class="im"></div>
+        <div class="text">
+            <h2>HINDI</h2>
+        </div>
+        </div>
+            
+    </div>
+<div id="hide" class="sec">
+    <div class="cards">
+        <div class="im"></div>
+        <div class="text">
+            <h2>PHYSICS</h2>
+        </div>
+        </div>
+        <div class="cards">
+            <div class="im"></div>
+            <div class="text">
+                <h2>CHEMISTRY</h2>
+            </div>
+            </div>
+            <div class="cards">
+                <div class="im"></div>
+                <div class="text">
+                    <h2>BIOLOGY</h2>
+                </div>
+                </div>
+                <div class="cards">
+                    <div class="im"></div>
+                    <div class="text">
+                        <h2>HISTORY</h2>
+                    </div>
+                    </div>
+                    <div class="cards">
+                        <div class="im"></div>
+                        <div class="text">
+                            <h2>GEOGRAPHY</h2>
+                        </div>
+                        </div>
+                        <div class="cards">
+                            <div class="im"></div>
+                            <div class="text">
+                                <h2>COMPUTER SCIENCE</h2>
+                            </div>
+                            </div>
+                            <div class="cards">
+                                <div class="im"></div>
+                                <div class="text">
+                                    <h2>COMMERCE</h2>
+                                </div>
+                                </div>
+                                <div class="cards">
+                                    <div class="im"></div>
+                                    <div class="text">
+                                        <h2>ECONOMICS</h2>
+                                    </div>
+                                    </div>
+                                    <div class="cards">
+                                        <div class="im"></div>
+                                        <div class="text">
+                                            <h2>MATHS</h2>
+                                        </div>
+                                        </div>
+                                                                                                                                                                                                                        
+   
+  
+</div>
+
+<button class="btnn">SHOW MORE</button>
 
 
 
 
 
-
-
-
-
-
-
-
-
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script type="text/javascript">
         var cursor = document.getElementById('cursor');
         document.addEventListener('mousemove',function(e){
@@ -328,6 +493,22 @@
     cursor.style.left=x+"px";
     cursor.style.top=y+"px";
     
+        });
+    </script>
+    <script>var v= 2+"roads"+" hh"
+    console.log(v);
+    </script>
+    <script>
+ var btnn = document.getElementsByClassName('btnn');
+ var abc = document.getElementById('hide');
+        document.addEventListener('click',function(btnn){
+
+            if (abc.style.display === "none") {
+		abc.style.display = "grid";
+	  } else {
+		abc.style.display = "none";
+	  }
+
         });
     </script>
 </body>
