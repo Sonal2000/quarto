@@ -22,13 +22,15 @@
           position: relative;
           height: 100vh;
           width: 100%;
-          background:linear-gradient(180deg,rgba(238, 255, 7,0.2),#ffffff),url(1.png);
+          background:linear-gradient(180deg,rgb(72, 100, 54),#8b8b8b),url(1.png);
           background-repeat: no-repeat;
           background-size: cover;
           background-blend-mode: screen;
 		  background-attachment: fixed;
           overflow-x: hidden;
+          background-attachment: fixed;
         }
+        
         .wave{
             position: absolute;
             bottom: 0%;
@@ -65,7 +67,7 @@
 	align-items: center;
 	justify-content: center;
 	border-radius: 50%;
-    background: rgb(255, 255, 255);
+    background: rgb(97, 255, 6);
     box-shadow: 1px 5px 10px rgb(0, 0, 0);
     border: 1px solid black;
 }
@@ -177,7 +179,7 @@
 }
 
 .menu > div > div > ul > li > a:hover{
-    color: crimson;
+    color:rgb(97, 255, 6);
 
 }
 
@@ -250,24 +252,71 @@
     margin: 2%;;
 }
 .box{
-    display: block;
+ 
     position: relative;
-    top: 50%;
-    left: 30%;
+height: 50%;
+display: flex;
+text-align: center;
 
-    width: 70%;
     text-align: center;
 
 }
 .caption{
- 
+    position: relative;
+
+ text-align: center;
     font-size: 1.3em;
-    color: rgb(0, 0, 0);
+    float: right;
+    color: rgb(255, 255, 255);
 }
-.box[class="caption"]
-{
-    font-size: 1.3em;
-    color: rgb(0, 0, 0);
+.photo{
+    position: relative;
+    top: 15%;
+    left: 25%;
+    width: 250px;
+    height: 300px;
+ background-color: rgb(8, 70, 11);
+    transform: rotate(-27.5deg)skewX(10deg);
+    box-shadow: -35px 35px 50px rgb(0, 0, 0);
+    transition: 0.5s;
+    background-size: cover;
+}
+.photo:hover{
+    transform: rotate(-37.5deg)skewX(10deg)translate(20pdx,-20px);
+    box-shadow: -50px 50px 100px rgb(0, 0, 0);
+}
+.photo::before{
+    content:'';
+    width: 30px;
+    height: 100%;
+    background-color: rgb(175, 174, 174);
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: 2px solid darkgreen;
+    transform: skewY(-45deg)translate(-30px,-15px);
+    box-shadow: inset -10px 0px 20px rgb(38, 63, 27);
+    border-bottom:none;
+}
+.photo::after{
+    content:'';
+    width: 100%;
+    height: 30px;
+    background-color: rgb(175, 174, 174);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform: skewX(-45deg)translate(15px,30px);
+    box-shadow: inset -10px 0px 20px rgb(163, 163, 163);
+    border: 2px solid darkgreen;
+    border-right:none;
+}
+.photo h3{
+    position: relative;
+    color: cadetblue;
+    font-size: 40px;
+    text-align:center;
+    top:30%;
     
 }
 .sec{
@@ -340,6 +389,47 @@ grid-template-columns: 1fr 1fr;
 @media(max-width:768px)
 {
 
+
+    .photo{
+    position: absolute;
+    
+    top: 50%;
+    left: 70%;
+    width: 200px;
+    height: 200px;
+ background-color: rgb(39, 38, 38);
+    transform: rotate(-7.5deg)skewX(10deg);
+    box-shadow: -35px 35px 50px rgb(0, 0, 0);
+    transition: 0.5s;
+    background-size: cover;
+}
+.photo:hover{
+    transform: rotate(-37.5deg)skewX(10deg)translate(20pdx,-20px);
+    box-shadow: -50px 50px 100px rgb(0, 0, 0);
+}
+.photo::before{
+    content:'';
+    width: 30px;
+    height: 100%;
+    background-color: rgb(175, 174, 174);
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: skewY(-45deg)translate(-30px,-15px);
+    box-shadow: inset -10px 0px 20px rgb(110, 110, 110);
+}
+.photo::after{
+    content:'';
+    width: 100%;
+    height: 30px;
+    background-color: rgb(175, 174, 174);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transform: skewX(-45deg)translate(15px,30px);
+    box-shadow: inset -10px 0px 20px rgb(163, 163, 163);
+}
+
     .sec{
 align-items: center;
 display:flex;
@@ -386,9 +476,11 @@ padding: 10px;
 </div>
             <h1 class="logo">QUARTO</h1>
             <div class="box">
-        <h3 class="caption">GET INSTANT NOTES.
-           
-        </h3>
+                <div class="photo">
+                    <h3>KIIT <br>
+                    notes</h3>
+                </div>
+       
         </div>
         
         <svg class="wave" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
@@ -485,19 +577,7 @@ padding: 10px;
 
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script type="text/javascript">
-        var cursor = document.getElementById('cursor');
-        document.addEventListener('mousemove',function(e){
-    var x =e.clientX;
-    var y =e.clientY;
-    cursor.style.left=x+"px";
-    cursor.style.top=y+"px";
-    
-        });
-    </script>
-    <script>var v= 2+"roads"+" hh"
-    console.log(v);
-    </script>
+
     <script>
  var btnn = document.getElementsByClassName('btnn');
  var abc = document.getElementById('hide');
